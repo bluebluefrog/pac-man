@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject pacman;
-    public GameObject blinky;
-    public GameObject clyde;
-    public GameObject inky;
-    public GameObject pinky;
+    public GameObject goman1;
+    public GameObject goman2;
+    public GameObject goman3;
+    public GameObject goman4;
 
     public bool isSuperPacman = false;
 
@@ -142,22 +142,18 @@ public class GameManager : MonoBehaviour
 
     private void ChangeEnemy()
     {
-        blinky.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
-        clyde.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
-        inky.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
-        pinky.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
+        goman1.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
+        goman2.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
+        goman3.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
+        goman4.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
     }
 
     private void UnChangeEnemy()
         {
-            //blinky.GetComponent<GhostMove>().enabled = false;
-            //clyde.GetComponent<GhostMove>().enabled = false;
-            //inky.GetComponent<GhostMove>().enabled = false;
-            //pinky.GetComponent<GhostMove>().enabled = false;
-            blinky.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-            clyde.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-            inky.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-            pinky.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        goman1.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        goman2.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        goman3.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        goman4.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         }
 
     public void FreezeEnemy(GameObject go) {
@@ -167,18 +163,18 @@ public class GameManager : MonoBehaviour
     }
 
     public void UnFreezeEnemy() {
-        blinky.GetComponent<GhostMove>().enabled = true;
-        clyde.GetComponent<GhostMove>().enabled = true;
-        inky.GetComponent<GhostMove>().enabled = true;
-        pinky.GetComponent<GhostMove>().enabled = true;
+        goman1.GetComponent<GhostMove>().enabled = true;
+        goman2.GetComponent<GhostMove>().enabled = true;
+        goman3.GetComponent<GhostMove>().enabled = true;
+        goman4.GetComponent<GhostMove>().enabled = true;
     }
 
     private void SetGameState(bool state) {
 
         pacman.GetComponent<PacmanMove>().enabled = state;
-        blinky.GetComponent<GhostMove>().enabled = state;
-        clyde.GetComponent<GhostMove>().enabled = state;
-        inky.GetComponent<GhostMove>().enabled = state;
-        pinky.GetComponent<GhostMove>().enabled = state;
+        goman1.GetComponent<GhostMove>().enabled = state;
+        goman2.GetComponent<GhostMove>().enabled = state;
+        goman3.GetComponent<GhostMove>().enabled = state;
+        goman4.GetComponent<GhostMove>().enabled = state;
     }
 }
